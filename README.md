@@ -15,10 +15,6 @@ This repository contains the test assignment for a Flutter developer position. T
 - Fetch data from the provided REST API.
 - Implement pagination to load the next 15 items when scrolling down.
 
-# Demo
-
-![App Usage](.git-files/demo.gif)
-
 ## Potential Improvements
 
 ### Error Handling
