@@ -41,7 +41,6 @@ class CoinsAssetsScreen extends StatelessWidget {
 
             return ListView.builder(
               itemCount: state.coinsList.length + 1,
-              shrinkWrap: true,
               itemBuilder: (context, index) {
                 if (index == state.coinsList.length) {
                   // Footer for infinity paginated loading
