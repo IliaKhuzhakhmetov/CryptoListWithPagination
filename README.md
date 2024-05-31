@@ -2,6 +2,10 @@
 
 This repository contains the test assignment for a Flutter developer position. The main goal is to implement a screen based on the provided Figma design, adhering to all specified parameters such as size, color, and font. Additionally, the application should retrieve data from a REST API and implement pagination.
 
+# Demo
+
+![demo](.git-files/demo.gif)
+
 # Task Description
 
 ## Screen Implementation
