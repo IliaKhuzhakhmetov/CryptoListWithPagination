@@ -31,7 +31,7 @@ class CoinItem extends StatelessWidget {
         style: textStyle,
       ),
       title: Text(
-        coinEntity.name,
+        coinEntity.symbol,
         style: textStyle,
         overflow: TextOverflow.ellipsis,
       ),

@@ -8,12 +8,12 @@ class CoinEntity extends Equatable {
   final String rank;
   final String symbol;
   final String name;
-  final double supply;
+  final double? supply;
   final double? maxSupply;
-  final double marketCapUsd;
-  final double volumeUsd24Hr;
-  final double priceUsd;
-  final double changePercent24Hr;
+  final double? marketCapUsd;
+  final double? volumeUsd24Hr;
+  final double? priceUsd;
+  final double? changePercent24Hr;
   final double? vwap24Hr;
 
   final Color backgroundColor;
@@ -23,12 +23,12 @@ class CoinEntity extends Equatable {
     required this.rank,
     required this.symbol,
     required this.name,
-    required this.supply,
+    this.supply,
     this.maxSupply,
-    required this.marketCapUsd,
-    required this.volumeUsd24Hr,
-    required this.priceUsd,
-    required this.changePercent24Hr,
+    this.marketCapUsd,
+    this.volumeUsd24Hr,
+    this.priceUsd,
+    this.changePercent24Hr,
     this.vwap24Hr,
     required this.backgroundColor,
   });
@@ -39,13 +39,13 @@ class CoinEntity extends Equatable {
   /// number as a currency string with the desired number of decimal places.
   String get formattedPriceUsd {
     // Determine the number of decimal digits to display
-    final decimalDigits = priceUsd >= 1 ? 2 : _calculateDecimalDigits(priceUsd);
+    final decimalDigits = (priceUsd ?? 0.0) >= 1 ? 2 : _calculateDecimalDigits(priceUsd ?? 0.0);
 
     // Create a currency formatter with the dollar symbol and the determined decimal places
     final formatter = NumberFormat.currency(symbol: '\$', decimalDigits: decimalDigits);
 
     // Return the formatted price
-    return formatter.format(priceUsd);
+    return formatter.format(priceUsd ?? 0.0);
   }
 
   /// Calculates the number of decimal digits to display for the price.
